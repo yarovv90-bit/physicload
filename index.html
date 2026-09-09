@@ -5,30 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PhysicRP Loading</title>
     <style>
-        /* Настройки страницы, чтобы картинка заполнила весь экран */
-        body {
+        html, body {
             margin: 0;
             padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #0b0f19;
+        }
+        .bg-image {
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100vw;
             height: 100vh;
-            /* Устанавливаем вашу картинку как фон */
-            background-image: url('https://raw.githubusercontent.com/yarovv90-bit/physicload/main/preview.jpg');
-            /* Растягиваем картинку на весь экран без искажений */
-            background-size: cover;
-            /* Центрируем фоновое изображение */
-            background-position: center;
-            /* Запрещаем картинке размножаться (повторяться) */
-            background-repeat: no-repeat;
-            /* Цвет фона на случай, если картинка ещё не успела загрузиться */
-            background-color: #0b0f19;
-            /* Скрываем полосы прокрутки, если они появятся */
-            overflow: hidden;
+            object-fit: cover; /* Растягивает картинку с сохранением пропорций на весь экран */
+            z-index: -1;
         }
     </style>
 </head>
 <body>
 
-    <!-- Здесь можно будет добавить текст, логотипы или полосу загрузки, если захотите -->
+    <img class="bg-image" src="https://raw.githubusercontent.com/yarovv90-bit/physicload/main/preview.jpg" alt="Loading Background">
 
 </body>
 </html>
